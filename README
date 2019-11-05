@@ -1,0 +1,46 @@
+[200~Exo 11
+
+Tableau TAB, TAB2 en Entier  
+ 
+ Variable COMPT, VAL, TAILLE, POS1, POS2, JOKER en Entier  
+  
+  Début  
+   
+   Ecrire "Indiquez la taille de votre tableau "  
+   Lire TAILLE  
+   Redim TAB(TAILLE)
+   Redim TAB2(TAILLE)   
+   COMPT ←0  
+    
+    TantQue (COMPT<TAILLE) Faire  
+     
+     Ecrire “indiquez une valeur pour le premier tableau”   
+     Lire VAL  
+     TAB[COMPT] ←VAL
+      
+      Ecrire “indiquez une valeur pour le second tableau”   
+      Lire VAL  
+      TAB2[COMPT] ←VAL
+       
+        
+	COMPT ←COMPT+1  
+	FinTantQue  
+	POS1 ←0
+	POS2 ←0
+	JOKER ←0
+	 
+	 TantQue (POS2<TAILLE) Faire  
+	  
+	  JOKER←JOKER+(TAB[POS1] *TAB2[POS2])
+	   
+	    
+	    Si POS1<TAILLE
+	    POS1←POS1+1
+	    Sinon
+	     POS2←POS2+1
+	     POS1←0
+	     Finsi
+	     FinTantQue
+	     Ecrire "la valeur du joker est de "&JOKER
+	      
+	      Fin
